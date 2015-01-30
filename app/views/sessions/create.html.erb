@@ -1,0 +1,7 @@
+<%= debug @auth %>
+
+<%
+client = Octokit::Client.new(:access_token => @auth["credentials"]["token"])
+%>
+
+<%= debug client.received_public_events(@auth["info"]["nickname"]) %>
