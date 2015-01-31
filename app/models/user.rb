@@ -4,8 +4,4 @@ class User < ActiveRecord::Base
   def github
     @github ||= profiles.github
   end
-
-  def github_client
-    github.client
-  end
 end
