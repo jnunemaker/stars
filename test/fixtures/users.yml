@@ -5,5 +5,4 @@
 # below each fixture, per the syntax in the comments below
 #
 
-jnunemaker:
-  created_at: <%= 1.day.ago %>
+jnunemaker: {}
