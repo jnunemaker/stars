@@ -2,9 +2,11 @@ Rails.application.routes.draw do
   root "stars#index"
   resources :stars
 
+  get "/auth/:provider/callback", to: "sessions#callback", as: :auth_callback
+  get "/auth/failure",            to: "sessions#failure",  as: :auth_failure
 
-  get "/auth/:provider/callback", to: "sessions#create"
-  get "/auth/failure" => "sessions#failure"
+  get "/no-access",   to: "sessions#no_access", as: :no_access
+  delete "/sign-out", to: "sessions#destroy",   as: :sign_out
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -8,8 +8,14 @@
 </head>
 <body>
 
-  <%= link_to "Stars", stars_path %>
-  <%= link_to "Sign in with GitHub", "/auth/github" %>
+  <% if signed_in? %>
+    <ul>
+      <li><%= link_to "Stars", stars_path %></li>
+      <li><%= link_to "Sign Out", sign_out_path, :method => :delete %></li>
+    </ul>
+  <% else %>
+    <%= link_to "Sign in with GitHub", "/auth/github" %>
+  <% end %>
 
   <%= yield %>
 
