@@ -26,5 +26,7 @@ module Stars
     config.generators.helper = false
     config.generators.javascripts = false
     config.generators.stylesheets = false
+
+    config.active_record.schema_format = :sql
   end
 end

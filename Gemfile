@@ -12,6 +12,7 @@ gem "sdoc", "~> 0.4.0", group: :doc
 
 gem "octokit", "~> 3.0"
 gem "omniauth-github"
+gem "pg_hstore"
 gem "warden"
 
 group :development, :test do
