@@ -14,6 +14,8 @@ class ActiveSupport::TestCase
 
   # Add more helper methods to be used by all tests here...
   include OmniAuthTestHelpers
+  include FixtureFileHelpers
+  include FactoryHelpers
 end
 
 # Add warden helpers to controller tests.
