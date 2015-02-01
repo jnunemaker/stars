@@ -1,4 +1,4 @@
-class GitHubStarImporter
+class StarImporter
   def initialize(user)
     @user = user
     @client = @user.github.client
