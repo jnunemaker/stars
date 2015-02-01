@@ -11,7 +11,7 @@ class Authentication
   #
   # Returns true if successfully persisted user exists, else false.
   def valid?
-    uid.present? && user && user.persisted?
+    uid.present? && info.present? && user && user.persisted?
   end
 
   # Public: Returns the user based on the auth information.
