@@ -2,6 +2,8 @@
 
 Collects github.com stars from people you follow. Not much to see right now though.
 
+![screenshot](docs/images/screenshot.png)
+
 ## Setup
 
 ```
