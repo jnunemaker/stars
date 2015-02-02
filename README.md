@@ -1,6 +1,6 @@
 # Stars
 
-Eventually will be an app that collects stars from the people you follow on GitHub in different ways than GitHub.com does. Nothing to see right now though.
+Collects github.com stars from people you follow. Not much to see right now though.
 
 ## Setup
 
