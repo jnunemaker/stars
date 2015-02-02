@@ -1,4 +1,4 @@
-task :import do
+task :import => :environment do
   User.find_each do |user|
     begin
       StarImporter.new(user).import
