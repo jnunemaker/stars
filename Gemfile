@@ -19,7 +19,11 @@ gem "local_time"
 gem "octokit", "~> 3.0"
 gem "omniauth-github"
 gem "pg_hstore"
+gem "puma"
 gem "warden"
+
+# for heroku
+gem 'rails_12factor', group: :production
 
 group :development, :test do
   gem "dotenv-rails"
