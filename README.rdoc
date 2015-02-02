@@ -5,6 +5,8 @@ Eventually will be an app that collects stars from the people you follow on GitH
 ## Setup
 
 ```
+mv .env.example .env
+# update .env with github oauth app key and secret
 script/bootstrap
 bin/rake db:create db:migrate db:test:prepare
 script/server
