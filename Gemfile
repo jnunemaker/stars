@@ -11,6 +11,8 @@ gem "jbuilder", "~> 2.0"
 gem "sdoc", "~> 0.4.0", group: :doc
 
 gem "bootstrap-sass", "~> 3.3.3"
+gem "bootstrap-kaminari-views"
+gem "kaminari"
 gem "local_time"
 gem "octokit", "~> 3.0"
 gem "omniauth-github"
