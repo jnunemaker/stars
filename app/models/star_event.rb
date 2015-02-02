@@ -23,4 +23,36 @@ class StarEvent < ActiveRecord::Base
   rescue ActiveRecord::RecordNotUnique
     for_event_id(event.id)
   end
+
+  def actor_id
+    source["actor_id"]
+  end
+
+  def actor_login
+    source["actor_login"]
+  end
+
+  def actor_avatar_url
+    source["actor_avatar_url"]
+  end
+
+  def actor_url
+    "https://github.com/#{actor_login}"
+  end
+
+  def repo_id
+    source["repo_id"]
+  end
+
+  def repo_name
+    source["repo_name"]
+  end
+
+  def repo_url
+    "https://github.com/#{repo_name}"
+  end
+
+  def event_created_at
+    source["created_at"]
+  end
 end

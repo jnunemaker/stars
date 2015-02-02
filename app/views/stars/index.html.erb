@@ -1,1 +1,30 @@
-<h1>Stars#index</h1>
+<div class="panel panel-default">
+  <div class="panel-heading">Stars</div>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>User</th>
+          <th>Repository</th>
+          <th>When</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @star_events.each do |star_event| %>
+          <tr>
+            <td>
+              <%= image_tag star_event.actor_avatar_url, width: "30" %>
+              <%= link_to star_event.actor_login, star_event.actor_url %>
+            </td>
+            <td>
+              <%= link_to star_event.repo_name, star_event.repo_url %>
+            </td>
+            <td>
+              <%= local_time star_event.event_created_at %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

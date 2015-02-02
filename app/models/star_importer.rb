@@ -21,7 +21,7 @@ class StarImporter
 
   def each_event
     with_auto_paginate do
-      @client.received_public_events(@nickname).each do |octokit_event|
+      @client.received_public_events(@nickname).reverse.each do |octokit_event|
         event = GitHubEvent.from_octokit_event(octokit_event)
         yield event if event.import_for?(@nickname)
       end
