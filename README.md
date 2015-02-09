@@ -33,11 +33,3 @@ script/test
 * Deploy to heroku
 * Run migrations `heroku run rake db:migrate -a <your app name>`
 * Add [heroku scheduler](https://addons.heroku.com/scheduler) and setup `bundle exec rake import` to run on whatever interval you want
-
-## Some Ideas
-
-* Don't show same repo multiple times, instead show it once and who all starred it
-* Import your own stars too and allow seeing them
-* Pull in trending repos (from github.com) for various languages
-* Show visited (probably just using a:visited)
-* Filter/search stars by repo and actor
