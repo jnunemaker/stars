@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-ruby ENV["CUSTOM_RUBY_VERSION"] || "2.1.4"
+ruby ENV["CUSTOM_RUBY_VERSION"] || "2.1.6"
 
 gem "rails", "4.2.0"
 gem "pg"
