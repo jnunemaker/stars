@@ -25,15 +25,21 @@ class StarEvent < ActiveRecord::Base
   end
 
   def actor_id
-    source["actor_id"]
+    if source
+      source["actor_id"]
+    end
   end
 
   def actor_login
-    source["actor_login"]
+    if source
+      source["actor_login"]
+    end
   end
 
   def actor_avatar_url
-    source["actor_avatar_url"]
+    if source
+      source["actor_avatar_url"]
+    end
   end
 
   def actor_url
@@ -41,11 +47,15 @@ class StarEvent < ActiveRecord::Base
   end
 
   def repo_id
-    source["repo_id"]
+    if source
+      source["repo_id"]
+    end
   end
 
   def repo_name
-    source["repo_name"]
+    if source
+      source["repo_name"]
+    end
   end
 
   def repo_url
@@ -53,6 +63,8 @@ class StarEvent < ActiveRecord::Base
   end
 
   def event_created_at
-    source["created_at"]
+    if source
+      source["created_at"]
+    end
   end
 end
