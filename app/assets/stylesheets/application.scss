@@ -12,3 +12,28 @@ body {
 a:visited {
   color: #C7DBEB;
 }
+
+td.repo {
+  a {
+    display:block;
+
+    small {
+      display:block;
+      color:#999;
+    }
+
+    &:hover {
+      text-decoration:none !important;
+
+      small {
+        color: #666;
+      }
+    }
+
+    &:visited {
+      small {
+        color:#eee;
+      }
+    }
+  }
+}

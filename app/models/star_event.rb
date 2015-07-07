@@ -18,6 +18,7 @@ class StarEvent < ActiveRecord::Base
         "actor_avatar_url" => event.actor_avatar_url,
         "repo_id"          => event.repo_id,
         "repo_name"        => event.repo_name,
+        "repo_description" => event.repo_description,
       },
     })
   rescue ActiveRecord::RecordNotUnique
@@ -55,6 +56,12 @@ class StarEvent < ActiveRecord::Base
   def repo_name
     if source
       source["repo_name"]
+    end
+  end
+
+  def repo_description
+    if source
+      source["repo_description"]
     end
   end
 

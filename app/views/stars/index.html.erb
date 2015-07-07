@@ -16,11 +16,16 @@
               <%= image_tag star_event.actor_avatar_url, width: "30" %>
               <%= link_to star_event.actor_login, star_event.actor_url %>
             </td>
-            <td>
-              <%= link_to star_event.repo_name, star_event.repo_url %>
+            <td class="repo">
+              <%= link_to star_event.repo_url  do %>
+                <%= star_event.repo_name %>
+                <small><%= star_event.repo_description %></small>
+              <% end %>
             </td>
             <td>
-              <%= local_time star_event.event_created_at %>
+              <% if star_event.event_created_at %>
+                <%= local_time star_event.event_created_at %>
+              <% end %>
             </td>
           </tr>
         <% end %>

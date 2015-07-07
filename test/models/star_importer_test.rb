@@ -8,6 +8,8 @@ class StarImporterTest < ActiveSupport::TestCase
       to_return(fixture_file("public_received_events_2.txt"))
     stub_request(:get, "https://api.github.com/user/235/received_events/public?page=3&per_page=100").
       to_return(fixture_file("public_received_events_3.txt"))
+    stub_request(:get, /https:\/\/api.github.com\/repos\/.*\/.*/)
+
 
     user = users(:jnunemaker)
     importer = StarImporter.new(user)
