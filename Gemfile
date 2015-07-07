@@ -23,7 +23,7 @@ gem "puma"
 gem "warden"
 
 # for heroku
-gem 'rails_12factor', group: :production
+gem "rails_12factor", group: :production
 
 group :development, :test do
   gem "dotenv-rails"
