@@ -1,5 +1,5 @@
 class StarEvent < ActiveRecord::Base
-  has_many :user_star_events
+  has_many :user_star_events, dependent: :destroy
   has_many :users, through: :user_star_events
 
   validates :event_id, presence: true
